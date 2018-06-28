@@ -1,0 +1,688 @@
+Handler: Sig Handler
+
+Hardware Model: iPhone8,1
+Process: QQ [287]
+Path: /var/containers/Bundle/Application/8C53A49E-4378-48C1-8DDB-4056C26765CC/QQ.app
+Identifier: com.tencent.mqq
+Version: 7.6.3.466
+Code Type: ARM-64 (Native)
+Parent Process: (null) [1]
+
+Date/Time: 2018-06-11 15:01:41
+OS Version: iPhone OS10.0.2(14A456)
+Report Version: 104
+
+SDK start time: 2018-06-11 15:01:34
+SDK server time delta: 0 s
+Last record time delta : 7728 ms
+RDM SDK Version: 2.1.8
+RDM Registed Uin : 1378911005
+RDM DeviceId: E5C69186-7833-4573-9165-A0B898345FDE
+RDM CI UUID: cacd3b83-605c-4e72-ab60-a0df27b38838
+RDM APP KEY: 0M2003OIIM08YV9M
+
+Exception Type: SIGBUS
+Exception Codes: BUS_ADRALN at 0x000000011e998000
+Crashed Thread: 22
+
+Thread 0: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  GraphicsServices               0x0000000189835198 GSEventRunModal + 172
+5  UIKit                          0x000000018dd8c628 -[UIApplication _run] +  684
+6  UIKit                          0x000000018dd87360 UIApplicationMain + 208
+7  QQMainProject                  0x0000000102e62614 QQMain (QQMian.m:139)
+8  libdyld.dylib                  0x0000000186d945b8 _dyld_process_info_notify_release + 36
+
+Thread 1: 
+0  libsystem_kernel.dylib         0x0000000186ea6a88 __workq_kernreturn + 0
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 2: 
+0  libsystem_kernel.dylib         0x0000000186ea6a88 __workq_kernreturn + 0
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 3: 
+0  libsystem_kernel.dylib         0x0000000186ea6a88 __workq_kernreturn + 0
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 4: 
+0  libsystem_kernel.dylib         0x0000000186ea6314 __semwait_signal + 4
+1  libc++.1.dylib                 0x00000001868d5994 std::__1::this_thread::sleep_for(std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > const&) + 76
+2  JavaScriptCore                 0x000000018c65a384 void std::__1::this_thread::sleep_for<long long, std::__1::ratio<1l, 1000l> >(std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000l> > const&) +  76
+3  JavaScriptCore                 0x000000018c659484 bmalloc::waitUntilFalse(std::__1::unique_lock<bmalloc::StaticMutex>&, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000l> >, bool&) +  128
+4  JavaScriptCore                 0x000000018c6592c0 bmalloc::Heap::scavenge(std::__1::unique_lock<bmalloc::StaticMutex>&, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000l> >) +  60
+5  JavaScriptCore                 0x000000018c659160 bmalloc::Heap::concurrentScavenge() +  80
+6  JavaScriptCore                 0x000000018c65a470 bmalloc::AsyncTask<bmalloc::Heap, void (bmalloc::Heap::*)()>::threadRunLoop() +  92
+7  JavaScriptCore                 0x000000018c65a39c std::__1::__shared_ptr_emplace<std::__1::mutex, std::__1::allocator<std::__1::mutex> >::~__shared_ptr_emplace()
+8  JavaScriptCore                 0x000000018c65a64c void* std::__1::__thread_proxy<std::__1::tuple<void (*)(bmalloc::AsyncTask<bmalloc::Heap, void (bmalloc::Heap::*)()>*), bmalloc::AsyncTask<bmalloc::Heap, void (bmalloc::Heap::*)()>*> >(void*) +  92
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 5 Name: WebThread
+Thread 5: 
+0  WebCore                        0x000000018d6aea74 WebCore::Style::TreeResolver::resolveComposedTree() +  1156
+1  WebCore                        0x000000018d6af0b0 WebCore::Style::TreeResolver::resolve(WebCore::Style::Change) +  544
+2  WebCore                        0x000000018cca0b28 WebCore::Document::recalcStyle(WebCore::Style::Change) +  536
+3  WebCore                        0x000000018ca25734 WebCore::AnimationControllerPrivate::fireEventsAndUpdateStyle() +  612
+4  WebCore                        0x000000018c8ffbec WebCore::ThreadTimers::sharedTimerFiredInternal() +  148
+5  WebCore                        0x000000018c8ffb44 WebCore::timerFired(__CFRunLoopTimer*, void*) +  28
+6  CoreFoundation                 0x0000000187e868f4 ___CFRUNLOOP_IS_CALLING_OUT_TO_A_TIMER_CALLBACK_FUNCTION__ +  28 +  28
+7  CoreFoundation                 0x0000000187e86608 ___CFRunLoopDoTimer +  872
+8  CoreFoundation                 0x0000000187e85ec4 ___CFRunLoopDoTimers +  244
+9  CoreFoundation                 0x0000000187e83ac0 ___CFRunLoopRun +  1572
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+11 WebCore                        0x000000018c953a2c RunWebThread(void*) +  456
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 6 Name: msfthread
+Thread 6: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  Foundation                     0x00000001888c0b1c -[NSRunLoop(NSRunLoop) runMode:beforeDate:] +  304
+5  Foundation                     0x00000001889152a0 -[NSRunLoop(NSRunLoop) run] +  88
+6  TlibDy                         0x0000000100839ab4 -[MsfRunloop runloopThreadEntry] (MsfRunloop.mm:105)
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 7 Name: msfsafethread
+Thread 7: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  Foundation                     0x00000001888c0b1c -[NSRunLoop(NSRunLoop) runMode:beforeDate:] +  304
+5  Foundation                     0x00000001889152a0 -[NSRunLoop(NSRunLoop) run] +  88
+6  TlibDy                         0x0000000100837df0 -[MsfSafeRunloop safeRunloopThreadEntry] (MsfSafeRunloop.mm:97)
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 8 Name: Blue frame monitor thread
+Thread 8: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  CoreFoundation                 0x0000000187dff8d4 CFRunLoopRun + 108
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 9: 
+0  libsystem_kernel.dylib         0x0000000186ea6a88 __workq_kernreturn + 0
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 10 Name: DefaultNet
+Thread 10: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  CoreFoundation                 0x0000000187dff8d4 CFRunLoopRun + 108
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 11: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  CoreFoundation                 0x0000000187dff8d4 CFRunLoopRun + 108
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 12: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  CoreFoundation                 0x0000000187dff8d4 CFRunLoopRun + 108
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 13: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  CoreFoundation                 0x0000000187dff8d4 CFRunLoopRun + 108
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 14 Name: com.apple.uikit.eventfetch-thread
+Thread 14: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  Foundation                     0x00000001888c0b1c -[NSRunLoop(NSRunLoop) runMode:beforeDate:] +  304
+5  Foundation                     0x00000001888e160c -[NSRunLoop(NSRunLoop) runUntilDate:] +  96
+6  UIKit                          0x000000018e701c7c -[UIEventFetcher threadMain] +  136
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 15 Name: foomDetector
+Thread 15: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  Foundation                     0x00000001888c0b1c -[NSRunLoop(NSRunLoop) runMode:beforeDate:] +  304
+5  Foundation                     0x00000001889152a0 -[NSRunLoop(NSRunLoop) run] +  88
+6  QQMainProject                  0x0000000104d9faf4 -[FOOMDetector threadMain] (FOOMDetector.mm:205)
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 16 Name: DefaultWork
+Thread 16: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  CoreFoundation                 0x0000000187dff8d4 CFRunLoopRun + 108
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 17: 
+0  libsystem_kernel.dylib         0x0000000186ea6a88 __workq_kernreturn + 0
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 18: 
+0  libsystem_kernel.dylib         0x0000000186ea690c __ulock_wait + 32
+1  libsystem_malloc.dylib         0x0000000186edb1ec _szone_malloc_should_clear +  3768
+2  libsystem_malloc.dylib         0x0000000186edd180 malloc_zone_calloc + 152
+2  libsystem_malloc.dylib         0x0000000186edd180 malloc_zone_calloc + 152
+4  libsystem_malloc.dylib         0x0000000186edd0c4 calloc + 36
+5  libobjc.A.dylib                0x000000018691b510 class_createInstance + 76
+6  libobjc.A.dylib                0x000000018692ad10 +[NSObject new] +  52
+7  QQMainProject                  0x00000001031568c0 -[QQLogger addOneLogInternal:inFile:inLine:moduleName:actionName:withLogContent:] (QQLogger.mm:576)
+8  QQMainProject                  0x0000000102be85dc QZC_LoggerExtNotVariable (QZCLogger.m:192)
+9  QQMainProject                  0x0000000102be853c QZC_Logger (QZCLogger.m:50)
+10 QQMainProject                  0x0000000102c07abc -[QZCAppConfig parseAppConfig:] (QZCAppConfig.m:270)
+11 QQMainProject                  0x000000010271c1a4 -[WnsSdkUtil hanldeExtraBuf:] (WnsSdkUtil.mm:394)
+12 QQMainProject                  0x00000001027099d8 -[QZNetworkEngine handleExtraBuffer:commd:] (QZNetworkEngine.mm:775)
+13 QQMainProject                  0x00000001027079f4 -[QZNetworkEngine handleRecieveSeq:data:reqContext:] (QZNetworkEngine.mm:564)
+14 libdispatch.dylib              0x0000000186d61200 __dispatch_call_block_and_release +  24
+15 libdispatch.dylib              0x0000000186d611c0 __dispatch_client_callout +  16
+16 libdispatch.dylib              0x0000000186d71558 __dispatch_root_queue_drain +  1032
+17 libdispatch.dylib              0x0000000186d710ec __dispatch_worker_thread3 +  124
+18 libsystem_pthread.dylib        0x0000000186f692c8 _pthread_wqthread + 1280
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 19: 
+0  libsystem_kernel.dylib         0x0000000186ea6a88 __workq_kernreturn + 0
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 20: 
+0  libsystem_kernel.dylib         0x0000000186ea6a88 __workq_kernreturn + 0
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 21: 
+0  libsystem_kernel.dylib         0x0000000186ea6a88 __workq_kernreturn + 0
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 22 Crashed: 
+0  libsystem_platform.dylib       0x0000000186f631b8 _platform_memset + 128
+1  CoreGraphics                   0x00000001894e1cb4 CGBlt_fillBytes + 360
+2  CoreGraphics                   0x00000001894ee46c _argb32_mark +  5904
+3  CoreGraphics                   0x000000018957ae4c _RIPLayerBltShape +  1156
+4  CoreGraphics                   0x00000001894d9088 _ripc_Render +  288
+5  CoreGraphics                   0x00000001894dafe4 _ripc_DrawRects +  340
+6  CoreGraphics                   0x00000001894e34c8 CGContextFillRects + 96
+7  CoreGraphics                   0x00000001894e3554 CGContextFillRect + 44
+8  CoreGraphics                   0x00000001894e36fc CGContextClearRect + 68
+9  QQMainProject                  0x000000010281e0e8 +[QZPhotoEncoder encodeImage:size:bytes:] (QZPhotoEncoder.m:42)
+10 QQMainProject                  0x00000001027d51e0 -[QZPhotoDataFile decodeImage:key:] (QZPhotoDataFile.m:214)
+11 QQMainProject                  0x00000001027f7414 __59-[QZPhotoDataFileManager addImage:key:size:comletionBlock:]_block_invoke (QZPhotoDataFileManager.m:0)
+14 libdispatch.dylib              0x0000000186d61200 __dispatch_call_block_and_release +  24
+15 libdispatch.dylib              0x0000000186d611c0 __dispatch_client_callout +  16
+14 libdispatch.dylib              0x0000000186d6f444 __dispatch_queue_serial_drain +  928
+15 libdispatch.dylib              0x0000000186d649a8 __dispatch_queue_invoke +  652
+16 libdispatch.dylib              0x0000000186d6f940 __dispatch_queue_override_invoke +  360
+17 libdispatch.dylib              0x0000000186d7138c __dispatch_root_queue_drain +  572
+17 libdispatch.dylib              0x0000000186d710ec __dispatch_worker_thread3 +  124
+18 libsystem_pthread.dylib        0x0000000186f692c8 _pthread_wqthread + 1280
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 23: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  CoreFoundation                 0x0000000187dff8d4 CFRunLoopRun + 108
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 24 Name: AVAudioSession Notify Thread
+Thread 24: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  AVFAudio                       0x00000001a1555fe8 GenericRunLoopThread::Entry(void*) +  164
+5  AVFAudio                       0x00000001a157bf14 CAPThread::Entry(CAPThread*) +  84
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 25 Name: com.apple.NSURLConnectionLoader
+Thread 25: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  CFNetwork                      0x000000018859fcec +[NSURLConnection(Loader) _resourceLoadLoop:] +  336
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 26: 
+0  libsystem_kernel.dylib         0x0000000186ea6314 __semwait_signal + 4
+1  libsystem_c.dylib              0x0000000186e2e290 sleep + 44
+2  QQMainProject                  0x0000000103b43c00 -[QQObjectPool RecoverThreadMain:] (QQObjectPool.mm:475)
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 27 Name: DefaultIO
+Thread 27: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  CoreFoundation                 0x0000000187dff8d4 CFRunLoopRun + 108
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 28: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  CoreFoundation                 0x0000000187dff8d4 CFRunLoopRun + 108
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 29: 
+0  libsystem_kernel.dylib         0x0000000186ea623c __rmdir + 32
+1  TlibDy                         0x00000001003db224 CXPTaskBase::Runloop() (xprefc.h:49)
+2  TlibDy                         0x00000001003daf8c CXPTaskBase::ThreadProc(void*) (xptask.cpp:308)
+3  TlibDy                         0x00000001003c9e78 xpthread_entry(void*) (xpthread_posix.cpp:166)
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 30: 
+0  libsystem_kernel.dylib         0x0000000186ea623c __rmdir + 32
+1  TlibDy                         0x00000001003db224 CXPTaskBase::Runloop() (xprefc.h:49)
+2  TlibDy                         0x00000001003daf8c CXPTaskBase::ThreadProc(void*) (xptask.cpp:308)
+3  TlibDy                         0x00000001003c9e78 xpthread_entry(void*) (xpthread_posix.cpp:166)
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 31: 
+0  libsystem_kernel.dylib         0x0000000186ea623c __rmdir + 32
+1  TlibDy                         0x00000001003db224 CXPTaskBase::Runloop() (xprefc.h:49)
+2  TlibDy                         0x00000001003daf8c CXPTaskBase::ThreadProc(void*) (xptask.cpp:308)
+3  TlibDy                         0x00000001003c9e78 xpthread_entry(void*) (xpthread_posix.cpp:166)
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 32: 
+0  libsystem_kernel.dylib         0x0000000186ea623c __rmdir + 32
+1  TlibDy                         0x00000001003db224 CXPTaskBase::Runloop() (xprefc.h:49)
+2  TlibDy                         0x00000001003daf8c CXPTaskBase::ThreadProc(void*) (xptask.cpp:308)
+3  TlibDy                         0x00000001003c9e78 xpthread_entry(void*) (xpthread_posix.cpp:166)
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 33 Name: DefaultDB
+Thread 33: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  CoreFoundation                 0x0000000187dff8d4 CFRunLoopRun + 108
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 34: 
+0  libsystem_kernel.dylib         0x0000000186ea623c __rmdir + 32
+1  TlibDy                         0x00000001003db224 CXPTaskBase::Runloop() (xprefc.h:49)
+2  TlibDy                         0x00000001003daf8c CXPTaskBase::ThreadProc(void*) (xptask.cpp:308)
+3  TlibDy                         0x00000001003c9e78 xpthread_entry(void*) (xpthread_posix.cpp:166)
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 35: 
+0  libsystem_kernel.dylib         0x0000000186ea623c __rmdir + 32
+1  TlibDy                         0x00000001003db224 CXPTaskBase::Runloop() (xprefc.h:49)
+2  TlibDy                         0x00000001003daf8c CXPTaskBase::ThreadProc(void*) (xptask.cpp:308)
+3  TlibDy                         0x00000001003c9e78 xpthread_entry(void*) (xpthread_posix.cpp:166)
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 36: 
+0  libsystem_kernel.dylib         0x0000000186ea5e1c __psynch_cvsignal + 32
+1  TlibDy                         0x00000001003c10ec xpevent_wait (xpevent_posix.cpp:189)
+2  TlibDy                         0x000000010106484c SharpAV::EventQueueProc() (Mutex.hpp:81)
+3  TlibDy                         0x0000000101072538 utils::TThread<SharpAV, true>::_threadLoop(void*) (Thread.hpp:269)
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 37 Name: LKJSExecutorThread
+Thread 37: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  CoreFoundation                 0x0000000187dff8d4 CFRunLoopRun + 108
+5  TlibDy                         0x00000001009e05f4 -[PTJSCodeExecutor runThread] (PTJSCodeExecutor.m:206)
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 38: 
+0  libsystem_kernel.dylib         0x0000000186ea6a88 __workq_kernreturn + 0
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 39: 
+0  libsystem_kernel.dylib         0x0000000186ea5e64 __psynch_mutexwait + 4
+1  libsystem_pthread.dylib        0x0000000186f6efb8 __pthread_mutex_lock_slow +  296
+2  libobjc.A.dylib                0x000000018691bb84 recursive_mutex_tt<false>::lock() +  16
+3  libobjc.A.dylib                0x000000018691f310 objc_sync_enter + 28
+4  QQMainProject                  0x00000001032a3974 -[BeaconSqlitePersistHandler getObjectCount:error:] (BeaconSqlitePersistHandler.mm:0)
+5  QQMainProject                  0x00000001046eeae0 -[BeaconLocalDataRecordInterface doPersist] (BeaconLocalDataRecordInterface.mm:205)
+14 libdispatch.dylib              0x0000000186d61200 __dispatch_call_block_and_release +  24
+15 libdispatch.dylib              0x0000000186d611c0 __dispatch_client_callout +  16
+8  libdispatch.dylib              0x0000000186d6fab4 __dispatch_queue_override_invoke +  732
+17 libdispatch.dylib              0x0000000186d7138c __dispatch_root_queue_drain +  572
+17 libdispatch.dylib              0x0000000186d710ec __dispatch_worker_thread3 +  124
+18 libsystem_pthread.dylib        0x0000000186f692c8 _pthread_wqthread + 1280
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 40: 
+0  libsystem_kernel.dylib         0x0000000186ea6a88 __workq_kernreturn + 0
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 41: 
+0  libsystem_kernel.dylib         0x0000000186ea5e1c __psynch_cvsignal + 32
+1  TlibDy                         0x0000000100ad4490 publiclib::Event::Wait(unsigned long) (event.cpp:131)
+2  TlibDy                         0x0000000100aed138 publiclib::Thread::Wait(unsigned int) (thread.cpp:105)
+3  TlibDy                         0x0000000100ad60d4 FileDiskSys::ThreadProc() (FileDiskSys.cpp:260)
+4  TlibDy                         0x0000000100ad96a8 publiclib::ThreadT<FileDiskSys>::ThreadProc() (thread.h:252)
+5  TlibDy                         0x0000000100aed034 publiclib::Thread::run(void*) (thread.cpp:146)
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 42: 
+0  libsystem_kernel.dylib         0x0000000186ea5e1c __psynch_cvsignal + 32
+1  TlibDy                         0x0000000100aed4ec wait_event (mythread.c:330)
+2  TlibDy                         0x0000000100ae7eb8 select_thread (netlayer.c:631)
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 43: 
+0  libsystem_kernel.dylib         0x0000000186e8a428 fsync + 0
+1  libsqlite3.dylib               0x00000001884283ec sqlite3_free_table + 59888
+2  libsqlite3.dylib               0x0000000188414f4c sqlite3_value_text + 22380
+3  libsqlite3.dylib               0x00000001883e3244 sqlite3_finalize + 3140
+4  libsqlite3.dylib               0x000000018840e0a8 sqlite3_step + 63508
+5  libsqlite3.dylib               0x00000001883feae4 sqlite3_step + 596
+6  QQMainProject                  0x00000001030a3cb0 -[FMDatabase executeUpdate:error:withArgumentsInArray:orDictionary:orVAList:] (FMDatabase.mm:978)
+7  QQMainProject                  0x00000001030a3fdc -[FMDatabase executeUpdate:] (FMDatabase.mm:1041)
+8  QQMainProject                  0x00000001032a3438 __56-[BeaconSqlitePersistHandler saveObjects:appType:error:]_block_invoke (BeaconSqlitePersistHandler.mm:741)
+9  QQMainProject                  0x00000001041679dc __30-[FMDatabaseQueue inDatabase:]_block_invoke (FMDatabaseQueue.m:165)
+15 libdispatch.dylib              0x0000000186d611c0 __dispatch_client_callout +  16
+11 libdispatch.dylib              0x0000000186d6e860 __dispatch_barrier_sync_f_invoke +  84
+12 QQMainProject                  0x000000010416796c -[FMDatabaseQueue inDatabase:] (FMDatabaseQueue.m:168)
+13 QQMainProject                  0x00000001032a3198 -[BeaconSqlitePersistHandler saveObjects:appType:error:] (BeaconSqlitePersistHandler.mm:751)
+14 QQMainProject                  0x00000001046eeb38 -[BeaconLocalDataRecordInterface doPersist] (BeaconLocalDataRecordInterface.mm:230)
+14 libdispatch.dylib              0x0000000186d61200 __dispatch_call_block_and_release +  24
+15 libdispatch.dylib              0x0000000186d611c0 __dispatch_client_callout +  16
+8  libdispatch.dylib              0x0000000186d6fab4 __dispatch_queue_override_invoke +  732
+17 libdispatch.dylib              0x0000000186d7138c __dispatch_root_queue_drain +  572
+17 libdispatch.dylib              0x0000000186d710ec __dispatch_worker_thread3 +  124
+18 libsystem_pthread.dylib        0x0000000186f692c8 _pthread_wqthread + 1280
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 44: 
+0  libsystem_kernel.dylib         0x0000000186ea5e1c __psynch_cvsignal + 32
+1  TlibDy                         0x0000000100ad4490 publiclib::Event::Wait(unsigned long) (event.cpp:131)
+2  TlibDy                         0x0000000100aed138 publiclib::Thread::Wait(unsigned int) (thread.cpp:105)
+3  TlibDy                         0x0000000100adb980 ProjectManager::ThreadProc() (ProjectManager.cpp:132)
+4  TlibDy                         0x0000000100add414 publiclib::ThreadT<ProjectManager>::ThreadProc() (thread.h:252)
+5  TlibDy                         0x0000000100aed034 publiclib::Thread::run(void*) (thread.cpp:146)
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 45: 
+0  libsystem_kernel.dylib         0x0000000186ea623c __rmdir + 32
+1  TlibDy                         0x0000000100ae8c60 ls_run_server (local_server.c:259)
+2  TlibDy                         0x0000000100ae8c1c ls_thread_serve (local_server.c:185)
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 46: 
+0  libsystem_kernel.dylib         0x0000000186ea6a88 __workq_kernreturn + 0
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 47: 
+0  libsystem_kernel.dylib         0x0000000186ea6a88 __workq_kernreturn + 0
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 48: 
+0  libsystem_kernel.dylib         0x0000000186ea6a88 __workq_kernreturn + 0
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 49: 
+0  libsystem_kernel.dylib         0x0000000186ea6a88 __workq_kernreturn + 0
+1  libsystem_pthread.dylib        0x0000000186f68db4 start_wqthread + 0
+
+Thread 50 Name: QZDNSPareseThread
+Thread 50: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  CoreFoundation                 0x0000000187dff8d4 CFRunLoopRun + 108
+5  QQMainProject                  0x0000000102beb5a8 +[QZDNSParseImplementation DNSRequestThreadFun] (QZDNSParseImplementation.m:29)
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 51 Name: CocoaSPDY1
+Thread 51: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  Foundation                     0x00000001888c0b1c -[NSRunLoop(NSRunLoop) runMode:beforeDate:] +  304
+5  Foundation                     0x00000001889152a0 -[NSRunLoop(NSRunLoop) run] +  88
+6  TlibDy                         0x000000010093d4a0 +[SPDYProtocol entry:] +  340
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 52 Name: com.apple.CFSocket.private
+Thread 52: 
+0  libsystem_kernel.dylib         0x0000000186ea623c __rmdir + 32
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 53: 
+0  libsystem_kernel.dylib         0x0000000186e8c630 kevent + 8
+1  TlibDy                         0x00000001004d5d80 uv_run (core.c:324)
+2  TlibDy                         0x0000000100479b74 _loop_thread(void*) (Loop.cpp:142)
+3  TlibDy                         0x00000001004da224 uv__thread_start (thread.c:51)
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 54 Name: com.apple.CoreMotion.MotionThread
+Thread 54: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  CoreFoundation                 0x0000000187dff8d4 CFRunLoopRun + 108
+5  CoreMotion                     0x000000018ebfa7dc CLStartStopAdvertisingBeacon + 187364
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 55 Name: BDH_Thread:0x118de57b0
+Thread 55: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  CoreFoundation                 0x0000000187dff8d4 CFRunLoopRun + 108
+5  TlibDy                         0x00000001007dfeec -[BDHUploadManager(Private) runRequests] (BDHUploadManager+private.mm:41)
+7  Foundation                     0x00000001889be50c ___NSThread__start__ +  1024
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 56 Name: com.apple.CFNetwork.CustomProtocols
+Thread 56: 
+0  libsystem_kernel.dylib         0x0000000186e8816c host_self_trap + 8
+1  CoreFoundation                 0x0000000187e85cec ___CFRunLoopServiceMachPort +  192
+2  CoreFoundation                 0x0000000187e83908 ___CFRunLoopRun +  1132
+3  CoreFoundation                 0x0000000187db2048 CFRunLoopRunSpecific + 436
+4  CFNetwork                      0x00000001886f2340 _privateRunloopEmulationSet(void*) +  264
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 57 Name: WebCore: LocalStorage
+Thread 57: 
+0  libsystem_kernel.dylib         0x0000000186ea5e1c __psynch_cvsignal + 32
+1  libc++.1.dylib                 0x00000001868953ec std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&) + 44
+2  JavaScriptCore                 0x000000018c642e6c _ZN3WTF10ParkingLot21parkConditionallyImplEPKvRKNS_12ScopedLambdaIFbvEEERKNS3_IFvvEEENSt3__16chron
+3  WebKitLegacy                   0x000000018da32a28 bool WTF::ConditionBase::waitForSecondsImpl<WTF::Lock>(WTF::Lock&, double) +  128
+4  WebKitLegacy                   0x000000018da32840 std::__1::unique_ptr<WTF::Function<void ()>, std::__1::default_delete<WTF::Function<void ()> > > WTF::MessageQueue<WTF::Function<void ()> >::waitForMessageFilteredWithTimeout<WTF::MessageQueue<WTF::Function<void ()> >::waitForMessage()::'lambda'(WTF::Function<void ()> const&)>(WTF::MessageQueueWaitResult&, WTF::MessageQueue<WTF::Function<void ()> >::waitForMessage()::'lambda'(WTF::Function<void ()> const&)&&, double) +  124
+5  WebKitLegacy                   0x000000018da31e68 WebCore::StorageThread::threadEntryPoint() +  68
+6  JavaScriptCore                 0x000000018bd8b35c WTF::threadEntryPoint(void*) +  212
+7  JavaScriptCore                 0x000000018bd8b26c WTF::wtfThreadEntryPoint(void*) +  24
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 58 Name: JIT Worklist Worker Thread
+Thread 58: 
+0  libsystem_kernel.dylib         0x0000000186ea5e1c __psynch_cvsignal + 32
+1  libc++.1.dylib                 0x00000001868953ec std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&) + 44
+2  JavaScriptCore                 0x000000018c642e6c _ZN3WTF10ParkingLot21parkConditionallyImplEPKvRKNS_12ScopedLambdaIFbvEEERKNS3_IFvvEEENSt3__16chron
+3  JavaScriptCore                 0x000000018c41b9b8 JSC::JITWorklist::runThread() +  192
+4  JavaScriptCore                 0x000000018c41be08 WTF::Vector<WTF::RefPtr<JSC::JITWorklist::Plan>, 32ul, WTF::CrashOnOverflow, 16ul>::expandCapacity(unsigned long, WTF::RefPtr<JSC::JITWorklist::Plan>*)
+6  JavaScriptCore                 0x000000018bd8b35c WTF::threadEntryPoint(void*) +  212
+7  JavaScriptCore                 0x000000018bd8b26c WTF::wtfThreadEntryPoint(void*) +  24
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+Thread 59 Name: WTF Parallel Helper Thread
+Thread 59: 
+0  libsystem_kernel.dylib         0x0000000186ea5e1c __psynch_cvsignal + 32
+1  libc++.1.dylib                 0x00000001868953ec std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&) + 44
+2  JavaScriptCore                 0x000000018c642e6c _ZN3WTF10ParkingLot21parkConditionallyImplEPKvRKNS_12ScopedLambdaIFbvEEERKNS3_IFvvEEENSt3__16chron
+3  JavaScriptCore                 0x000000018c642464 WTF::ParallelHelperPool::waitForClientWithTask(WTF::Locker<WTF::LockBase> const&) +  288
+4  JavaScriptCore                 0x000000018c642204 WTF::ParallelHelperPool::helperThreadBody() +  76
+6  JavaScriptCore                 0x000000018bd8b35c WTF::threadEntryPoint(void*) +  212
+7  JavaScriptCore                 0x000000018bd8b26c WTF::wtfThreadEntryPoint(void*) +  24
+9  libsystem_pthread.dylib        0x0000000186f6b860 __pthread_body +  240
+10 libsystem_pthread.dylib        0x0000000186f6b770 __pthread_body
+11 libsystem_pthread.dylib        0x0000000186f68dbc start_wqthread + 0
+
+
+Thread 22 crashed with ARM 64 Thread State:
+     x0:  0x000000011e998000    x1: 000000000000000000    x2: 0x00000000000003dc     x3: 0x000000011e998000
+     x4:  0x0000000000000400    x5: 000000000000000000    x6: 000000000000000000     x7: 0x0000000000000004
+     x8:  0x00000000000003dc    x9: 0x0000000000000001   x10: 0x00000001894f0fec    x11: 000000000000000000
+    x12: 0x00000001897994b8    x13: 0x00000001897994b0   x14: 000000000000000000    x15: 000000000000000000
+    x16: 0x000000011e998000    x17: 0x00000000ff00ff00   x18: 000000000000000000    x19: 0x000000011e998000
+    x20: 0x00000000000003dc    x21: 0x00000000000000f7   x22: 0x0000000000000400    x23: 000000000000000000
+    x24: 0x000000011e998000    x25: 0x00000000000000ff   x26: 0x0000000000000100    x27: 0x0000000000000009
+    x28: 0x000000016eb8d5d8    fp: 0x000000016eb8d4a0    lr: 0x00000001894e1cb4    
+    sp: 0x000000016eb8d4a0     pc: 0x0000000186f631b8    cpsr: 0x80000000
+ 
+Binary Images:
+0x100228000 - 0x101b73fff  TlibDy arm64 <b7863aac3a3a38b785a8d72ec5a94eaf> /private/var/containers/Bundle/Application/8C53A49E-4378-48C1-8DDB-4056C26765CC/QQ.app/Frameworks/TlibDy.framework/TlibDy
+0x102310000 - 0x105f47fff  QQMainProject arm64 <52fdce61f0273bf2ac216eda87c4dcc4> /private/var/containers/Bundle/Application/8C53A49E-4378-48C1-8DDB-4056C26765CC/QQ.app/Frameworks/QQMainProject.framework/QQMainProject
+0x187da9000 - 0x18812cfff  CoreFoundation arm64 <c4824900d70e3fd5b01dbb079b63eae1> /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+0x18688e000 - 0x1868e3fff  libc++.1.dylib arm64 <95f6dd603b933208ba95cc2d84613c54> /usr/lib/libc++.1.dylib
+0x186f68000 - 0x186f71fff  libsystem_pthread.dylib arm64 <be17c5de3ff83a8695913479341c34ec> /usr/lib/system/libsystem_pthread.dylib
+0x186e87000 - 0x186eabfff  libsystem_kernel.dylib arm64 <04e6664af08030e1ad7d9f2249e47e18> /usr/lib/system/libsystem_kernel.dylib
+0x186f61000 - 0x186f67fff  libsystem_platform.dylib arm64 <6735814899ed328499ce8a0f59ff49b6> /usr/lib/system/libsystem_platform.dylib
+0x186d90000 - 0x186d94fff  libdyld.dylib arm64 <b69bc0979de93e7c9cac9d89b284039f> /usr/lib/system/libdyld.dylib
+0x186ed9000 - 0x186ef4fff  libsystem_malloc.dylib arm64 <6eef211324863711a1d99713c51512cb> /usr/lib/system/libsystem_malloc.dylib
+0x186db7000 - 0x186e35fff  libsystem_c.dylib arm64 <051c0135e5d835979ce0166c05c8f381> /usr/lib/system/libsystem_c.dylib
+0x186d60000 - 0x186d8ffff  libdispatch.dylib arm64 <9da4900c6d953655bbfcc6b31c990e9c> /usr/lib/system/libdispatch.dylib
+0x186908000 - 0x186ce1fff  libobjc.A.dylib arm64 <56adf6a5a61b3ef1968bae3dd66e4893> /usr/lib/libobjc.A.dylib
+0x1888b4000 - 0x188b82fff  Foundation arm64 <a6ad10553017396ebb4eba2a4ad331d8> /System/Library/Frameworks/Foundation.framework/Foundation
+0x1884d3000 - 0x188842fff  CFNetwork arm64 <ca09941bfd353bb8b6b679a0f14cad1e> /System/Library/Frameworks/CFNetwork.framework/CFNetwork
+0x1883be000 - 0x1884d2fff  libsqlite3.dylib arm64 <511215637edc3a0f8d3416fe4536881d> /usr/lib/libsqlite3.dylib
+0x1892db000 - 0x189828fff  CoreGraphics arm64 <4a137515f15e30a495edf7ec114755e0> /System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+0x18da07000 - 0x18dae8fff  WebKitLegacy arm64 <20b8c9cf5b3b3564b1e90113ea896db1> /System/Library/PrivateFrameworks/WebKitLegacy.framework/WebKitLegacy
+0x189829000 - 0x18983dfff  GraphicsServices arm64 <1e0ed9315f4830088aa2086205f45050> /System/Library/PrivateFrameworks/GraphicsServices.framework/GraphicsServices
+0x18bd81000 - 0x18c6d7fff  JavaScriptCore arm64 <3a74efcce7283410ac8a55027b67d2ef> /System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore
+0x18c8ee000 - 0x18d9dcfff  WebCore arm64 <5f4c0a6773123239905a48919249deff> /System/Library/PrivateFrameworks/WebCore.framework/WebCore
+0x18dd11000 - 0x18ea9efff  UIKit arm64 <439dc80bfac033ed983e5bb8c416c452> /System/Library/Frameworks/UIKit.framework/UIKit
+0x1a14dd000 - 0x1a15b1fff  AVFAudio arm64 <291f828312d038c9aecd48a7069cc790> /System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/AVFAudio
+0x18eb99000 - 0x18eccdfff  CoreMotion arm64 <b4fe074374f13922aaa6833f2278495e> /System/Library/Frameworks/CoreMotion.framework/CoreMotion
+8da07000 - 0x18dae8fff  WebKitLegacy arm64 <20b8c9cf5b3b3564b1e90113ea896db1> /System/Library/PrivateFrameworks/WebKitLegacy.framework/WebKitLegacy
+0x189829000 - 0x18983dfff  GraphicsServices arm64 <1e0ed9315f4830088aa2086205f45050> /System/Library/PrivateFrameworks/GraphicsServices.framework/GraphicsServices
+0x18bd81000 - 0x18c6d7fff  JavaScriptCore arm64 <3a74efcce7283410ac8a55027b67d2ef> /System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore
+0x18c8ee000 - 0x18d9dcfff  WebCore arm64 <5f4c0a6773123239905a48919249deff> /System/Library/PrivateFrameworks/WebCore.framework/WebCore
+0x18dd11000 - 0x18ea9efff  UIKit 
